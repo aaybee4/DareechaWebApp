@@ -1,0 +1,45 @@
+.album {
+    background-color: #f7f7f7;
+    padding-bottom: 3rem;
+    padding-top: 3rem; }
+  
+  .jumbotron {
+    background-color: #fff;
+    margin-bottom: 0;
+    padding-bottom: 6rem;
+    padding-top: 6rem;
+    background: url("/img/banjo.jpg") bottom center no-repeat; }
+  
+  .jumbotron p {
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
+  
+  .jumbotron-heading {
+    font-weight: 300; }
+  
+  .jumbotron .container {
+    max-width: 40rem;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 2rem;
+    color: white; }
+  
+  .card {
+    border: 0;
+    float: left;
+    margin-bottom: 2rem;
+    padding: .75rem;
+    width: 33.333%; }
+  
+  .card > img {
+    margin-bottom: .75rem;
+    max-width: 100%; }
+  
+  .card-text {
+    font-size: 85%; }
+  
+  footer {
+    padding-top: 3rem;
+    padding-bottom: 3rem; }
+  
+  footer p {
+    margin-bottom: .25rem; }

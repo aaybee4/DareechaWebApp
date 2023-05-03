@@ -1,0 +1,35 @@
+
+    <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 py-4">
+              <h4 class="text-white">About</h4>
+              <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
+            </div>
+            <div class="col-sm-4 py-4">
+              <h4 class="text-white">Contact</h4>
+              <ul class="list-unstyled">
+                {% if p == 'home' %}
+                  <li><a href="{% url 'page1' %}" class="text-white">Page #1</a></li>
+                {% elif  p == 'p1' %}
+                  <li><a href="{% url 'home' %}" class="text-white">Home</a></li>
+                {% endif %}
+                <li><a href="#" class="text-white">Page #2</a></li>
+                <li><a href="#" class="text-white">Page #3</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navbar navbar-dark bg-dark">
+        <div class="container d-flex justify-content-between">
+        {% if p == 'home' %}
+          <a href="#" class="navbar-brand">Home</a>
+        {% elif  p == 'p1' %}
+          <a href="#" class="navbar-brand">Page 1</a>
+        {% endif %}
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
