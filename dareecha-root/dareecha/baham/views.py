@@ -49,20 +49,4 @@ def save_vehicle(request):
     owner = UserProfile.objects.filter(pk=owner_id).get()
     obj = Vehicle(registration_number=registration_number, colour=colour, model=model, owner=owner.user, status=status)
     obj.save()
-    return HttpResponseRedirect(reverse(view_p1))
-
-def log_create_or_update(sender, instance, created, **kwargs):
-    if created:
-        action = 'C'
-        details = f'New Object created with Id {instance.id}'
-    else:
-        action = 'U'
-        details = f'Object updated with Id {instance.id}'
-    logEntry = ActivityLog(user=User.objects.get(username = 'admin'),
-                           action=action, model=instance, details=details)
-    logEntry.save()
-
-def log_delete(sender, instance, **kwargs):
-    logEntry = ActivityLog(user=User.objects.get(username = 'admin'),
-                           action='D', model=instance, details=f'Object Deleted with Id {instance.id}')
-    logEntry.save()
+    return HttpResponseRedirect(reverse(view_p1
